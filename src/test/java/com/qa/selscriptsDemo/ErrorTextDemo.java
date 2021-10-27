@@ -19,7 +19,11 @@ public class ErrorTextDemo {
 	
 	
 	
-	// do not enter email
+	//  enter an invalid email
+	
+	e1.sendKeys("sonal042343553");
+	
+	Thread.sleep(2000);
 	
 	e2.click();
 	
@@ -31,7 +35,7 @@ public class ErrorTextDemo {
 	
 	System.out.println("the error text is :" + text);
 	
-	if(text.contains("Enter a valid email address"))
+	if(text.contains("account doesn't exist"))
 	{
 		System.out.println(" error text correct");
 	}
