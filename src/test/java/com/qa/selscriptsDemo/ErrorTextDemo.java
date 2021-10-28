@@ -17,7 +17,7 @@ public class ErrorTextDemo {
 	
 	WebElement e2 =  driver.findElement(By.xpath("//input[@type='submit']"));
 	
-	
+
 	
 	//  enter an invalid email
 	

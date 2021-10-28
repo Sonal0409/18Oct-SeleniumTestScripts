@@ -24,6 +24,20 @@ driver.get("https://chandanachaitanya.github.io/selenium-practice-site/?language
 		
 		a.accept();
 		
+
+		driver.findElement(By.id("promptBox")).click();
+		
+		Alert a1 = driver.switchTo().alert();
+		
+		
+		
+		Thread.sleep(3000);
+		
+		a1.sendKeys("QTP");
+		
+		a1.accept();
+		
+		
 		
 
 	}
