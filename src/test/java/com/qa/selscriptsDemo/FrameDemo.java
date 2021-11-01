@@ -19,6 +19,8 @@ public class FrameDemo {
 	
 	driver.switchTo().frame("packageListFrame");
 	
+	driver.switchTo().frame(0);
+	
 	driver.findElement(By.linkText("org.openqa.selenium.chrome")).click();
 	
 	driver.switchTo().parentFrame();
