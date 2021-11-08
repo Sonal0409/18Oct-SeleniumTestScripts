@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-04T09:04:49 IST" name="ParamterTestNG" finished-at="2021-11-04T09:04:52 IST" duration-ms="3471">
+  <suite started-at="2021-11-05T09:07:36 IST" name="Default suite" finished-at="2021-11-05T09:08:02 IST" duration-ms="25640">
     <groups>
     </groups>
-    <test started-at="2021-11-04T09:04:49 IST" name="Test1" finished-at="2021-11-04T09:04:52 IST" duration-ms="3471">
-      <class name="com.qa.TestNGParameters.Seleniumdemoparameter">
-        <test-method signature="wikipage(java.lang.String)[pri:0, instance:com.qa.TestNGParameters.Seleniumdemoparameter@2f8dad04]" started-at="2021-11-04T09:04:49 IST" name="wikipage" finished-at="2021-11-04T09:04:52 IST" duration-ms="3433" status="PASS">
+    <test started-at="2021-11-05T09:07:36 IST" name="Default test" finished-at="2021-11-05T09:08:02 IST" duration-ms="25640">
+      <class name="com.qa.DataDrivenTesting.SimpleScript">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:07:37 IST" name="setup" finished-at="2021-11-05T09:07:41 IST" duration-ms="3681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="wikiPageInput(java.lang.String)[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:07:41 IST" name="wikiPageInput" data-provider="testdata" finished-at="2021-11-05T09:07:47 IST" duration-ms="6621" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[jemter automation]]>
+                <![CDATA[Selenium]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wikipage -->
-      </class> <!-- com.qa.TestNGParameters.Seleniumdemoparameter -->
-    </test> <!-- Test1 -->
-  </suite> <!-- ParamterTestNG -->
+        </test-method> <!-- wikiPageInput -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:07:47 IST" name="setup" finished-at="2021-11-05T09:07:50 IST" duration-ms="2911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="wikiPageInput(java.lang.String)[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:07:50 IST" name="wikiPageInput" data-provider="testdata" finished-at="2021-11-05T09:07:57 IST" duration-ms="6587" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wikiPageInput -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:07:57 IST" name="setup" finished-at="2021-11-05T09:08:00 IST" duration-ms="2839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="wikiPageInput(java.lang.String)[pri:0, instance:com.qa.DataDrivenTesting.SimpleScript@15aab8c6]" started-at="2021-11-05T09:08:00 IST" name="wikiPageInput" data-provider="testdata" finished-at="2021-11-05T09:08:02 IST" duration-ms="2311" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jmeter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wikiPageInput -->
+      </class> <!-- com.qa.DataDrivenTesting.SimpleScript -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

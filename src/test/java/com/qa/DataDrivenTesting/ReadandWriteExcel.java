@@ -19,7 +19,7 @@ public class ReadandWriteExcel {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Special%3ASearch&returntoquery=search%3D%26go%3DGo");
+		driver.get("https://register.rediff.com/register/register.php?FormName=user_details");
 	}
 
 	
@@ -28,7 +28,7 @@ public class ReadandWriteExcel {
 	
 	{
 		// Create column in your sheet
-		reader.addColumn("Sheet1", "Status");
+		//reader.addColumn("Sheet1", "Status");
 		
 		// Count the number of rows in the sheet which has data
 	int rowcount=	reader.getRowCount("Sheet1");

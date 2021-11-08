@@ -1,19 +1,27 @@
 package com.qa.DataDrivenTesting;
 
-import org.openqa.selenium.Alert;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class ReadDataFROMEXCEL {
+public class ReadDataTestNG {
 	
 	WebDriver driver;
+
 	
-	Xls_Reader reader = new Xls_Reader("C:\\Users\\sonal\\Desktop\\Excels\\ReadData.xlsx");
-	
-	@BeforeClass
+	@BeforeMethod
 	public void setup()
 	{
 	driver = new ChromeDriver();
@@ -22,29 +30,11 @@ public class ReadDataFROMEXCEL {
 		
 	}
 	
-	
-	@Test
-	public void createAcount() throws InterruptedException
+
+	@Test(dataProvider="testdata")
+	// script and use Dataprovider anotation to inject data into your test method
+	public void createaccount(String fullname, String rediffid, String password, String retype ) throws InterruptedException
 	{
-		
-		reader.addColumn("Sheet2", "Status");
-		
-		
-	int rowcount= reader.getRowCount("Sheet2"); // 20
-		
-	
-		
-		// go to every row , every column in the sheet and fetch the cell data of the excel
-		
-		for (int i=2;i<=rowcount;i++)
-		{
-		String fullname= reader.getCellData("Sheet2", "fullname", i);
-		String rediffid = reader.getCellData("Sheet2", "rediffid", i);
-		String password = reader.getCellData("Sheet2", "password", i);
-		String retype = reader.getCellData("Sheet2", "retype", i);
-		
-	
-	
 		driver.findElement(By.xpath("//input[starts-with(@name ,'name')]")).clear();
 		driver.findElement(By.xpath("//input[starts-with(@name ,'name')]")).sendKeys(fullname);
 		Thread.sleep(2000);
@@ -56,9 +46,30 @@ public class ReadDataFROMEXCEL {
 		driver.findElement(By.xpath("//input[starts-with(@name ,'confirm_passwd')]")).clear();
 		driver.findElement(By.xpath("//input[starts-with(@name ,'confirm_passwd')]")).sendKeys(retype);
 	
+		driver.close();
 		
-		reader.setCellData("Sheet2", "Status", i, "executed");
-		}
+	}
+	
+	//fetch data form excel with help of apache poi
+	@DataProvider(name="testdata")
+	public Object[][] readdata()
+	{
+		
+		Object input[][]=	Xls_dataProvider.getTestData("Sheet1");
+		
+		return input;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

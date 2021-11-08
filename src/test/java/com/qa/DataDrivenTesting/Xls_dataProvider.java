@@ -13,7 +13,7 @@ public class Xls_dataProvider {
 	static Workbook book;
 	static Sheet sheet;
 	
-	public static String testdata_sheet_path = "C:\\Users\\sonal\\Desktop\\Excels\\TestData.xlsx";
+	public static String testdata_sheet_path = "C:\\Users\\sonal\\Desktop\\Excels\\SimpleTestData.xlsx";
 	
 	public static Object[][] getTestData(String sheetName) 
 	{
@@ -43,7 +43,7 @@ public class Xls_dataProvider {
 		{
 			for( int j=0; j<sheet.getRow(0).getLastCellNum();j++)
 			{
-				inputData[i][j]= sheet.getRow(i+1).getCell(j).toString();
+				inputData[i][j]= sheet.getRow(i).getCell(j).toString();
 			}
 		}
 		return inputData;
