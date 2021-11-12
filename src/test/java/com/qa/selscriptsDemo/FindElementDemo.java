@@ -23,7 +23,12 @@ public class FindElementDemo extends Base{
 	//WebElement
 
 driver.findElement(By.cssSelector("#wpName2")).clear();
-
+// #id
+// tagname#idvalue
+// tagname.class
+// tagname[attribute=value]
+// tagname.class[attribute=value]
+// tag:contains("textvalue")
 driver.findElement(By.cssSelector("input#wpName2")).sendKeys("admin");
 	
 	

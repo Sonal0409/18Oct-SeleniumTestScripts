@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.DataDrivenTesting.ReadDataTestNG">
+      <class name="actionsClassDemo.DragandDropDemo">
         <methods>
-          <include name="createaccount" invocation-numbers="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"/>
-          <include name="setup"/>
+          <include name="DragDropDemo"/>
         </methods>
-      </class> <!-- com.qa.DataDrivenTesting.ReadDataTestNG -->
+      </class> <!-- actionsClassDemo.DragandDropDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

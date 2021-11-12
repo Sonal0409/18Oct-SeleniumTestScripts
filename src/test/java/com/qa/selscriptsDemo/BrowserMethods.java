@@ -1,5 +1,6 @@
 package com.qa.selscriptsDemo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,19 +28,20 @@ public class BrowserMethods {
 		
 		System.out.println("The actual title is : " + actualTitle); // selenium from webpage
 	
-		// Compare actual title with expected title
-		
-		String expectedTitle = "Wikipedia";
-		
-		if(actualTitle.equals(expectedTitle))
-		{
-			System.out.println("The title is correct");
-		}
-		else 
-			System.out.println("The title is not correct");
-		
+		/*
+		 * // Compare actual title with expected title
+		 * 
+		 * String expectedTitle = "Wikipedia";
+		 * 
+		 * if(actualTitle.equals(expectedTitle)) {
+		 * System.out.println("The title is correct"); } else
+		 * System.out.println("The title is not correct");
+		 */
 		
 		
+	String text=	driver.findElement(By.xpath("//*[@class='lang-list-button-wrapper']/descendant::span[1]")).getText();
+		
+		System.out.println(text);
 		
 		
 		
